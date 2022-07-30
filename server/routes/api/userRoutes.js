@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { getUsers, createUser } = require('../../controllers/userController');
 
+// create
 router.post("/", async (req, res) => {
     try {
         const userData = await createUser(req.body)
@@ -9,7 +10,7 @@ router.post("/", async (req, res) => {
         res.status(500).json(error);
     }
 })
-
+// get all users
 router.get("/", async (req, res) => {
     try {
         const userData = await getUsers()
