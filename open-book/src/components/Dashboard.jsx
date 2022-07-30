@@ -1,15 +1,14 @@
 import React from "react";
-import ButtonAppBar from "./subcomponents/Navbar";
-import BasicCard from "./subcomponents/StatCards";
-import BasicTabs from "./subcomponents/Tabs";
-
+import Navbar from "./subcomponents/admin/Navbar";
+import StatCard from "./subcomponents/admin/StatCards";
+import TableTabs from "./subcomponents/admin/Tabs";
 
 function Dashboard() {
   return (
     <div>
-      <ButtonAppBar />
-      <BasicCard />
-      <BasicTabs />
+      <Navbar />
+      <StatCard />
+      <TableTabs />
     </div>
   );
 }

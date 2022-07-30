@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import BasicSelect from "./Select";
 
-export const MuiTable = () => {
+export const PendingTable = () => {
   return (
     <TableContainer sx={{ maxHeight: "800px" }} component={Paper}>
       <Table stickyHeader aria-label="simple table">

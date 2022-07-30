@@ -5,7 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { ApprovedTable } from "./ApprovedTable";
-import { MuiTable } from "./Table";
+import { PendingTable } from "./PendingTable";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,7 +40,7 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
+export default function TableTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -60,7 +60,7 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <MuiTable />
+        <PendingTable />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <ApprovedTable />

@@ -4,8 +4,6 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import SendIcon from "@mui/icons-material/Send";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -36,11 +34,6 @@ export default function RowAndColumnSpacing() {
           </Grid>
           <Grid item xs={6}>
             <TextField required id="outlined-required" label="Phone" />
-          </Grid>
-          <Grid item xs={6}>
-            <Button variant="contained" endIcon={<SendIcon />}>
-              Send
-            </Button>
           </Grid>
         </Grid>
       </Item>

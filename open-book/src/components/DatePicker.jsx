@@ -1,11 +1,10 @@
 import React from "react";
-
-import HorizontalLinearStepper from './userlink/Stepper'
+import UserSteps from "./subcomponents/userlink/Stepper";
 
 function DatePicker() {
   return (
     <div>
-      <HorizontalLinearStepper />
+      <UserSteps />
     </div>
   );
 }
