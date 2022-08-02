@@ -6,7 +6,7 @@ const formatDate = (date) => {
 const formatTime = (date) => {
     return dayjs(date).format("h:mm a")
 }
-const apptSchema = new Schema({
+const UserSchema = new Schema({
   firstName: {
     type: String,
     required: true,
@@ -49,8 +49,8 @@ const apptSchema = new Schema({
     required: true,
   }
 });
-const Appt = model("Appt", apptSchema);
-module.exports = Appt;
+const User = model("User", UserSchema);
+module.exports = User;
 
 
 
