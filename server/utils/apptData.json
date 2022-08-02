@@ -1,0 +1,38 @@
+[
+  {
+    "firstName": "George",
+    "lastName": "Escobar",
+    "email": "jorge@aim.com",
+    "phoneNumber": 2147840150,
+    "dateCreated": "August 06, 2022",
+    "dateSelected": "August 09, 2022",
+    "timeSelected": "03:00 PM" 
+  },
+  {
+    "firstName": "Zane",
+    "lastName": "Marsh",
+    "email": "notaballer@aim.com",
+    "phoneNumber": 2147840150,
+    "dateCreated": "August 07, 2022",
+    "dateSelected": "August 12, 2022",
+    "timeSelected": "02:00 PM" 
+  },
+  {
+    "firstName": "Jimmy",
+    "lastName": "Johns",
+    "email": "Jimmy@yahoo.com",
+    "phoneNumber": 2147840150,
+    "dateCreated": "August 10, 2022",
+    "dateSelected": "August 18, 2022",
+    "timeSelected": "11:00 AM" 
+  },
+  {
+    "firstName": "Abe",
+    "lastName": "Smith",
+    "email": "Abe@gmail.com",
+    "phoneNumber": 2147840150,
+    "dateCreated": "August 11, 2022",
+    "dateSelected": "August 20, 2022",
+    "timeSelected": "04:00 PM" 
+  }
+]
