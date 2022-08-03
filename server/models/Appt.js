@@ -36,13 +36,13 @@ const apptSchema = new Schema({
     default: new Date(),
     get: formatDate,
   },
-  dateSelected: {
+  appointmentDate: {
     type: Date,
     required: true,
     get: formatDate,
   },
-  timeSelected: {
-    type: Date,
+  appointmentTime: {
+    type: String,
     required: true,
     get: formatTime,
   },
