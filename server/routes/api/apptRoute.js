@@ -27,5 +27,13 @@ router.post("/new", (req, res) => {
     });
 });
 
+router.get("/", (req, res) => {
+    try {
+        
+    } catch (err) {
+
+    }
+})
+
 
 module.exports = router;

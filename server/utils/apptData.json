@@ -5,8 +5,9 @@
     "email": "jorge@aim.com",
     "phoneNumber": 2147840150,
     "dateCreated": "August 06, 2022",
-    "dateSelected": "August 09, 2022",
-    "timeSelected": "03:00 PM" 
+    "appointmentDate": "August 09, 2022",
+    "appointmentTime": "03:00 PM",
+    "status": true
   },
   {
     "firstName": "Zane",
@@ -14,8 +15,9 @@
     "email": "notaballer@aim.com",
     "phoneNumber": 2147840150,
     "dateCreated": "August 07, 2022",
-    "dateSelected": "August 12, 2022",
-    "timeSelected": "02:00 PM" 
+    "appointmentDate": "August 12, 2022",
+    "appointmentTime": "02:00 PM",
+    "status": true
   },
   {
     "firstName": "Jimmy",
@@ -23,8 +25,9 @@
     "email": "Jimmy@yahoo.com",
     "phoneNumber": 2147840150,
     "dateCreated": "August 10, 2022",
-    "dateSelected": "August 18, 2022",
-    "timeSelected": "11:00 AM" 
+    "appointmentDate": "August 18, 2022",
+    "appointmentTime": "11:00 AM",
+    "status": true
   },
   {
     "firstName": "Abe",
@@ -32,7 +35,8 @@
     "email": "Abe@gmail.com",
     "phoneNumber": 2147840150,
     "dateCreated": "August 11, 2022",
-    "dateSelected": "August 20, 2022",
-    "timeSelected": "04:00 PM" 
+    "appointmentDate": "August 20, 2022",
+    "appointmentTime": "04:00 PM",
+    "status": true
   }
 ]
