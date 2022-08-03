@@ -3,6 +3,7 @@ import Dashboard from "./components/Dashboard";
 import DataTables from "./components/DataTables";
 import DatePicker from "./components/DatePicker";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import VerticalDividerText from "./components/subcomponents/login/Divider";
 
 function App() {
   const routes = [
@@ -22,18 +23,21 @@ function App() {
   ];
 
   return (
-    <Router>
-      <Routes>
-        {routes.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            element={route.main}
-            exact={route.exact}
-          />
-        ))}
-      </Routes>
-    </Router>
+    // <Router>
+    //   <Routes>
+    //     {routes.map((route, index) => (
+    //       <Route
+    //         key={index}
+    //         path={route.path}
+    //         element={route.main}
+    //         exact={route.exact}
+    //       />
+    //     ))}
+    //   </Routes>
+    // </Router>
+    <>
+      <VerticalDividerText />
+    </>
   );
 }
 

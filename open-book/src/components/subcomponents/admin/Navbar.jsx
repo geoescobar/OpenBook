@@ -17,7 +17,7 @@ export default function Navbar() {
             component="a"
             sx={{ flexGrow: 1, color: "white", textDecoration: "none" }}
           >
-            <Link to={"/data-tables"}>OpenBook</Link>
+            <Link to={"/"}>OpenBook</Link>
           </Typography>
           <Button color="inherit">
             <MenuDropdown />
