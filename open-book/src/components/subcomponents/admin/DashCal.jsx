@@ -9,15 +9,17 @@ export default function DashCal() {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <StaticDatePicker
-        orientation="landscape"
-        minDate={new Date()}
-        openTo="day"
-        value={value}
-        maxDate={new Date("12/31/2024")}
-        renderInput={(params) => <TextField {...params} />}
-        // inputFormat="MMMM DD, YYYY"
-      />
+      <div className="date-picker-wrapper">
+        <StaticDatePicker
+          orientation="landscape"
+          minDate={new Date()}
+          openTo="day"
+          value={value}
+          maxDate={new Date("12/31/2024")}
+          renderInput={(params) => <TextField {...params} />}
+          // inputFormat="MMMM DD, YYYY"
+        />
+      </div>
     </LocalizationProvider>
   );
 }

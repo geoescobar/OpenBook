@@ -15,12 +15,13 @@ export default function AptManager() {
         width: "100%",
         maxWidth: 360,
         bgcolor: "background.paper",
-        height: "371px",
+      
+        color: "black",
       }}
     >
-      <ListItem>
+      <ListItem sx={{ marginTop: "60px" }}>
         <ListItemAvatar>
-          <Avatar>
+          <Avatar sx={{ color: "white", bgcolor: "#232528" }}>
             <WorkIcon />
           </Avatar>
         </ListItemAvatar>
@@ -31,7 +32,7 @@ export default function AptManager() {
       </ListItem>
       <ListItem>
         <ListItemAvatar>
-          <Avatar>
+          <Avatar sx={{ color: "white", bgcolor: "green" }}>
             <CheckCircleIcon />
           </Avatar>
         </ListItemAvatar>
@@ -42,7 +43,7 @@ export default function AptManager() {
       </ListItem>
       <ListItem>
         <ListItemAvatar>
-          <Avatar>
+          <Avatar sx={{ color: "white", bgcolor: "red" }}>
             <CancelIcon />
           </Avatar>
         </ListItemAvatar>

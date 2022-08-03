@@ -16,7 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function RowAndColumnSpacing() {
   return (
     <Box
-      sx={{ width: "100%", "& .MuiTextField-root": { m: 1, width: "25ch" } }}
+      sx={{ width: "100%", "& .MuiTextField-root": { m: 1, width: "10" } }}
       component="form"
       noValidate
       autoComplete="off"

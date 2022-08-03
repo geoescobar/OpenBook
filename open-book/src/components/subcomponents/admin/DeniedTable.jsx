@@ -8,7 +8,7 @@ import {
   Paper,
 } from "@mui/material";
 
-export const ApprovedTable = () => {
+export const DeniedTable = () => {
   return (
     <TableContainer sx={{ maxHeight: "800px" }} component={Paper}>
       <Table stickyHeader aria-label="simple table">
@@ -86,6 +86,8 @@ export const ApprovedTable = () => {
             </TableCell>
           </TableRow>
         </TableHead>
+
+
         <TableBody>
           {tableData.map((row) => (
             <TableRow
@@ -110,57 +112,38 @@ export const ApprovedTable = () => {
 const tableData = [
   {
     id: 1,
-    first_name: "Beret",
-    last_name: "Lennard",
-    email: "blennard0@pcworld.com",
+    first_name: "John",
+    last_name: "Mayer",
+    email: "johnM@gmail.com",
     phone: "214-207-9744",
-    apt: "August 06, 2022",
-    time: "03:00 PM",
+    apt: "August 31, 2022",
+    time: "01:00 PM",
   },
   {
     id: 2,
-    first_name: "Tera",
-    last_name: "Choke",
-    email: "tchoke1@theatlantic.com",
+    first_name: "Usain",
+    last_name: "Bolt",
+    email: "bolt@theatlantic.com",
     phone: "214-207-9744",
-    apt: "August 06, 2022",
+    apt: "September 04, 2022",
     time: "03:00 PM",
   },
   {
     id: 3,
-    first_name: "Lyn",
-    last_name: "Bowart",
-    email: "lbowart2@odnoklassniki.ru",
-    phone: "214-207-9744",
-
-    apt: "August 06, 2022",
-    time: "03:00 PM",
+    first_name: "LeBron",
+    last_name: "James",
+    email: "leGoat@goat.com",
+    phone: "214-550-9744",
+    apt: "October 14, 2022",
+    time: "02:00 PM",
   },
   {
     id: 4,
-    first_name: "Bert",
-    last_name: "Huckett",
-    email: "bhuckett3@tinypic.com",
-    phone: "214-207-9744",
-    apt: "August 06, 2022",
-    time: "03:00 PM",
-  },
-  {
-    id: 5,
-    first_name: "Drew",
-    last_name: "Jenicke",
-    email: "djenicke4@businessinsider.com",
-    phone: "214-207-9744",
-    apt: "August 06, 2022",
-    time: "03:00 PM",
-  },
-  {
-    id: 6,
-    first_name: "Deloria",
-    last_name: "Pepperill",
-    email: "dpepperill5@meetup.com",
-    phone: "214-207-9744",
-    apt: "August 06, 2022",
-    time: "03:00 PM",
+    first_name: "Ricky",
+    last_name: "Bobby",
+    email: "gofast@nascar.com",
+    phone: "512-207-3352",
+    apt: "December 12, 2022",
+    time: "04:00 PM",
   },
 ];

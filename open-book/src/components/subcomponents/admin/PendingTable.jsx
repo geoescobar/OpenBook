@@ -14,19 +14,101 @@ export const PendingTable = () => {
     <TableContainer sx={{ maxHeight: "800px" }} component={Paper}>
       <Table stickyHeader aria-label="simple table">
         <TableHead>
-          <TableRow>Appointments</TableRow>
           <TableRow>
-            <TableCell>Id</TableCell>
-            <TableCell>First Name</TableCell>
-            <TableCell>Last Name</TableCell>
-            <TableCell>Email</TableCell>
-            <TableCell>Phone</TableCell>
-            <TableCell>Req. Date</TableCell>
-            <TableCell>App. Date</TableCell>
-            <TableCell>Time</TableCell>
-            <TableCell>Status</TableCell>
+            <TableCell
+              sx={{
+                bgcolor: "#003049",
+                color: "white",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+            >
+              Id
+            </TableCell>
+            <TableCell
+              sx={{
+                bgcolor: "#003049",
+                color: "white",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+            >
+              First Name
+            </TableCell>
+            <TableCell
+              sx={{
+                bgcolor: "#003049",
+                color: "white",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+            >
+              Last Name
+            </TableCell>
+            <TableCell
+              sx={{
+                bgcolor: "#003049",
+                color: "white",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+            >
+              Email
+            </TableCell>
+            <TableCell
+              sx={{
+                bgcolor: "#003049",
+                color: "white",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+            >
+              Phone
+            </TableCell>
+            <TableCell
+              sx={{
+                bgcolor: "#003049",
+                color: "white",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+            >
+              Req. Date
+            </TableCell>
+            <TableCell
+              sx={{
+                bgcolor: "#003049",
+                color: "white",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+            >
+              App. Date
+            </TableCell>
+            <TableCell
+              sx={{
+                bgcolor: "#003049",
+                color: "white",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+            >
+              Time
+            </TableCell>
+            <TableCell
+              sx={{
+                bgcolor: "#003049",
+                color: "white",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+              }}
+            >
+              Status
+            </TableCell>
           </TableRow>
         </TableHead>
+
+        
         <TableBody>
           {tableData.map((row) => (
             <TableRow

@@ -4,8 +4,10 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { ApprovedTable } from "./ApprovedTable";
-import { PendingTable } from "./PendingTable";
+import { ApprovedTable } from "./subcomponents/admin/ApprovedTable";
+import { PendingTable } from "./subcomponents/admin/PendingTable";
+import { DeniedTable } from "./subcomponents/admin/DeniedTable";
+import Navbar from "./subcomponents/admin/Navbar";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,7 +42,7 @@ function a11yProps(index) {
   };
 }
 
-export default function TableTabs() {
+export default function DataTables() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -49,6 +51,7 @@ export default function TableTabs() {
 
   return (
     <Box sx={{ width: "100%" }}>
+      <Navbar />
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
@@ -57,6 +60,7 @@ export default function TableTabs() {
         >
           <Tab label="Pending" {...a11yProps(0)} />
           <Tab label="Approved" {...a11yProps(1)} />
+          <Tab label="Denied" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -64,6 +68,9 @@ export default function TableTabs() {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <ApprovedTable />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <DeniedTable />
       </TabPanel>
     </Box>
   );

@@ -1,3 +1,24 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap");
+
+body {
+  background-color: #e8f1f2;
+  font-family: "Poppins", sans-serif !important;
+}
+
 .date-picker-wrapper .MuiDialogActions-root {
+  display: none !important;
+}
+
+.date-picker-wrapper .MuiSvgIcon-root {
+  display: none;
+}
+
+.date-picker-wrapper .MuiTypography-overline {
   display: none;
 }
