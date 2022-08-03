@@ -13,7 +13,7 @@ const Grid = styled(MuiGrid)(({ theme }) => ({
   },
 }));
 
-export default function VerticalDividerText() {
+export default function AdminVerification() {
   return (
     <Grid container>
       <Grid item xs>

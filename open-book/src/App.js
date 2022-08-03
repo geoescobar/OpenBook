@@ -3,12 +3,23 @@ import Dashboard from "./components/Dashboard";
 import DataTables from "./components/DataTables";
 import DatePicker from "./components/DatePicker";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import VerticalDividerText from "./components/subcomponents/login/Divider";
+import AdminVerification from "./components/subcomponents/login/Divider";
+import Landing from "./components/subcomponents/landing/LandingTemp";
 
 function App() {
   const routes = [
     {
       path: "/",
+      exact: true,
+      main: <Landing />,
+    },
+    {
+      path: "/admin-verification",
+      exact: true,
+      main: <AdminVerification />,
+    },
+    {
+      path: "/dashboard",
       exact: true,
       main: <Dashboard />,
     },
@@ -23,21 +34,18 @@ function App() {
   ];
 
   return (
-    // <Router>
-    //   <Routes>
-    //     {routes.map((route, index) => (
-    //       <Route
-    //         key={index}
-    //         path={route.path}
-    //         element={route.main}
-    //         exact={route.exact}
-    //       />
-    //     ))}
-    //   </Routes>
-    // </Router>
-    <>
-      <VerticalDividerText />
-    </>
+    <Router>
+      <Routes>
+        {routes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={route.main}
+            exact={route.exact}
+          />
+        ))}
+      </Routes>
+    </Router>
   );
 }
 
