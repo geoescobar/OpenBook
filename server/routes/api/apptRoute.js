@@ -27,6 +27,8 @@ router.post("/new", (req, res) => {
     });
 });
 
+
+// -------------------- GET ALL APPTS -------------------- //
 router.get("/", (req, res) => {
     try {
         
