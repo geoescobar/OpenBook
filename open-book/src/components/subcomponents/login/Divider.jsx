@@ -20,7 +20,7 @@ export default function AdminVerification() {
         <SignIn />
       </Grid>
       <Divider orientation="vertical" flexItem>
-        OpenBook
+        <img className="logo" src="./assets/logo-dark.png" alt="Logo" />
       </Divider>
       <Grid item xs>
         <SignUp />

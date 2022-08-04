@@ -44,7 +44,9 @@ export default function UserSteps() {
         p: 1,
       }}
     >
-      <Typography variant="h1">OpenBook</Typography>
+      <Typography variant="h1" sx={{ pb: "5px" }}>
+        OpenBook
+      </Typography>
       <Typography variant="h3">Book Appointment Below!</Typography>
       <Stepper activeStep={activeStep} orientation="vertical">
         <Step>

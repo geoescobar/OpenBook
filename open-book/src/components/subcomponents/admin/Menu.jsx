@@ -43,9 +43,14 @@ export default function MenuDropdown() {
                     alignItems: "center",
                     textAlign: "center",
                     justifyContent: "center",
+                    color: "black",
+                    textDecoration: "none",
+                    textDecorationColor: "none",
                   }}
                 >
-                  <Link to={"/"}>Home</Link>
+                  <Link to={"/dashboard"} className="menu-link">
+                    Home
+                  </Link>
                 </ListItemText>
               </ListItemButton>
             </ListItem>
@@ -57,7 +62,9 @@ export default function MenuDropdown() {
                   justifyContent: "center",
                 }}
               >
-                <Link to={"/data-tables"}>Manage Appoinments</Link>
+                <Link to={"/data-tables"} className="menu-link">
+                  Manage Appoinments
+                </Link>
               </ListItemButton>
             </ListItem>
 
@@ -69,7 +76,22 @@ export default function MenuDropdown() {
                   justifyContent: "center",
                 }}
               >
-                <Link to={"/date-picker"}>Send Invite</Link>
+                <Link to={"/date-picker"} className="menu-link">
+                  Send Invite
+                </Link>
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton
+                sx={{
+                  alignItems: "center",
+                  textAlign: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Link to={"/subscription"} className="menu-link">
+                  Manage Subscription
+                </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>

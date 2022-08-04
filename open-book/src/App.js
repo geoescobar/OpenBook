@@ -5,6 +5,7 @@ import DatePicker from "./components/DatePicker";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdminVerification from "./components/subcomponents/login/Divider";
 import Landing from "./components/subcomponents/landing/LandingTemp";
+import SuccessDisplay from "./components/subcomponents/admin/Upgrade";
 
 function App() {
   const routes = [
@@ -26,6 +27,10 @@ function App() {
     {
       path: "/data-tables",
       main: <DataTables />,
+    },
+    {
+      path: "/subscription",
+      main: <SuccessDisplay />,
     },
     {
       path: "/date-picker",

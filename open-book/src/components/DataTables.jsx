@@ -8,6 +8,7 @@ import { ApprovedTable } from "./subcomponents/admin/ApprovedTable";
 import { PendingTable } from "./subcomponents/admin/PendingTable";
 import { DeniedTable } from "./subcomponents/admin/DeniedTable";
 import Navbar from "./subcomponents/admin/Navbar";
+import Container from "@mui/material/Container";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,6 +53,22 @@ export default function DataTables() {
   return (
     <Box sx={{ width: "100%" }}>
       <Navbar />
+      <Container
+        disableGutters
+        maxWidth="sm"
+        component="main"
+        sx={{ pt: 2, pb: 4 }}
+      >
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color="text.primary"
+          gutterBottom
+        >
+          Manage Appointments
+        </Typography>
+      </Container>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}

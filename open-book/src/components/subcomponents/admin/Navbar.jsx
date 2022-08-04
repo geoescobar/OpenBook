@@ -10,14 +10,24 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={{ bgcolor: "#003049" }} position="static">
+      <AppBar sx={{ bgcolor: "#003049", maxHeight: "100px" }} position="static">
         <Toolbar>
           <Typography
-            variant="h6"
+            variant="img"
             component="a"
-            sx={{ flexGrow: 1, color: "white", textDecoration: "none" }}
+            sx={{
+              flexGrow: 1,
+              color: "white",
+              textDecoration: "none",
+            }}
           >
-            <Link to={"/"}>OpenBook</Link>
+            <Link to={"/dashboard"}>
+              <img
+                className="logo2"
+                src="./assets/light-logo.png"
+                alt="Logo-light"
+              />
+            </Link>
           </Typography>
           <Button color="inherit">
             <MenuDropdown />

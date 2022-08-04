@@ -110,8 +110,13 @@ export default function BasicGrid() {
 
         <Grid xs={12} sx={{ ml: "15px" }}>
           <Item sx={{ height: "50%", width: "auto", marginTop: "5px" }}>
-            <Typography variant="h6" component="a" href="/">
-              Insert invite link here
+            <Typography
+              variant="h6"
+              component="a"
+              href="/"
+              sx={{ color: "black", textDecoration: "underline" }}
+            >
+              OpenBook.com/book-appointment
             </Typography>
           </Item>
         </Grid>
