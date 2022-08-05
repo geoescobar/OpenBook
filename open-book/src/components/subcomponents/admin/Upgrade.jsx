@@ -48,7 +48,7 @@ const tiers = [
   {
     title: "Gold",
     subheader: "Most Popular",
-    price: "4.20",
+    price: "96.00",
     description: [
       "Added Admin Capabilities",
       "Live Data Analytics",
@@ -61,7 +61,7 @@ const tiers = [
   },
   {
     title: "Platinum",
-    price: "6.90",
+    price: "144.00",
     description: [
       "Assign Administrative Roles",
       "5 TB of Storage",
@@ -153,7 +153,7 @@ function PricingContent() {
                       ${tier.price}
                     </Typography>
                     <Typography variant="h6" color="text.secondary">
-                      /mo
+                      /yr
                     </Typography>
                   </Box>
                   <ul>

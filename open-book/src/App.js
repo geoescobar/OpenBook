@@ -4,7 +4,7 @@ import DataTables from "./components/DataTables";
 import DatePicker from "./components/DatePicker";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdminVerification from "./components/subcomponents/login/Divider";
-import Landing from "./components/subcomponents/landing/LandingTemp";
+import LandingPage from "./components/subcomponents/landing/LandingPage";
 import SuccessDisplay from "./components/subcomponents/admin/Upgrade";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     {
       path: "/",
       exact: true,
-      main: <Landing />,
+      main: <LandingPage />,
     },
     {
       path: "/admin-verification",

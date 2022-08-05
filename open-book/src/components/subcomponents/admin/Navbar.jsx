@@ -23,7 +23,7 @@ export default function Navbar() {
           >
             <Link to={"/dashboard"}>
               <img
-                className="logo2"
+                className="logo-two"
                 src="./assets/light-logo.png"
                 alt="Logo-light"
               />

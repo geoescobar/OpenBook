@@ -29,7 +29,36 @@ body {
   width: 200px;
 }
 
+.logo-title {
+  margin-top: 2px;
+  height: 500px;
+  width: 500px;
+  z-index: 100;
+}
+
+.logo-two {
+  margin-top: 25px;
+  height: 150px;
+  width: 150px;
+  z-index: 100;
+}
+
 .menu-link {
   text-decoration: none;
   color: black;
+}
+
+.title-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  color: #e8f1f2;
+}
+
+
+
+.button-title {
+  color: #e8f1f2;
+  text-decoration: none;
 }
