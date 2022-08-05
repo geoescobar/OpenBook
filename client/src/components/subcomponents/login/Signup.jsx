@@ -10,6 +10,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 function Copyright(props) {
@@ -30,6 +31,8 @@ function Copyright(props) {
   );
 }
 
+
+
 export default function SignUp() {
   const [input, setInput] = useState(
     {
@@ -42,22 +45,21 @@ export default function SignUp() {
     }
   );
 
+  let navigate = useNavigate();
+
   const updateField = (event) => {
-    console.log(event.target.name);
-    console.log({
-      ...input,
-      [event.target.name]: event.target.value,
-    })
 
     setInput({
       ...input,
       [event.target.name]: event.target.value,
     })
-  }
+  };
 
   const handleSubmit = async(event) => {
     event.preventDefault();
     const response = await axios.post("/api/users/signup", input);
+
+    navigate("/dashboard");
 
     console.log(response);
   };

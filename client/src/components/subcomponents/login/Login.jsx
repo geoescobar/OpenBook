@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -8,6 +8,8 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -30,13 +32,29 @@ function Copyright(props) {
 // const theme = createTheme();
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
+  const [login, setLogin] = useState(
+    {
+      email: "",
+      password: ""
+    }
+  );
+
+  let navigate = useNavigate();
+
+  const updateField = (event) => {
+    setLogin({
+      ...login,
+      [event.target.name]: event.target.value
+    })
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+
+    const response = await axios.post("/auth/login", login);
+
+    navigate("/dashboard");
+
   };
 
   return (
@@ -63,6 +81,8 @@ export default function SignIn() {
             sx={{ mt: 1 }}
           >
             <TextField
+              value={login.email}
+              onChange= {updateField}
               margin="normal"
               required
               fullWidth
@@ -73,6 +93,8 @@ export default function SignIn() {
               autoFocus
             />
             <TextField
+              value={login.password}
+              onChange= {updateField}
               margin="normal"
               required
               fullWidth

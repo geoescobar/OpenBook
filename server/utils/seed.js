@@ -6,7 +6,7 @@ const apptData = require("./apptData.json");
 const seedDb = async () => {
     try {
         await User.deleteMany();
-        await User.insertMany(userData);
+        await User.create(userData);
         await Appt.deleteMany();
         await Appt.insertMany(apptData);
         process.exit();

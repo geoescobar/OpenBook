@@ -10,6 +10,8 @@ import Typography from "@mui/material/Typography";
 import RowAndColumnSpacing from "./FormCard";
 import StaticDatePickerLandscape from "./Calendar";
 import StaticTimePickerLandscape from "./Time";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function UserSteps() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -17,6 +19,34 @@ export default function UserSteps() {
   const [date, setDate] = React.useState(new Date());
 
   const [time, setTime] = React.useState(new Date());
+
+  const [appt, setAppt] = React.useState(
+    {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      dateCreated: "",
+      appointmentDate: "",
+      appointmentTime: ""
+    }
+  );
+
+  const updateField = (event) => {
+    setAppt({
+      ...appt,
+      [event.target.name]: event.target.value,
+    })
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const response = await axios.put("/appointments", appt);
+
+  }
+
+
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -48,7 +78,7 @@ export default function UserSteps() {
         OpenBook
       </Typography>
       <Typography variant="h3">Book Appointment Below!</Typography>
-      <Stepper activeStep={activeStep} orientation="vertical">
+      <Stepper activeStep={activeStep} orientation="vertical" onSubmit={handleSubmit}>
         <Step>
           <StepLabel>Select A Date:</StepLabel>
           <StepContent>
@@ -101,7 +131,7 @@ export default function UserSteps() {
           </StepLabel>
           <StepContent>
             <Typography>
-              <RowAndColumnSpacing />
+              <RowAndColumnSpacing updateField={updateField}/>
             </Typography>
             <Box sx={{ mb: 2 }}>
               <div>

@@ -9,10 +9,22 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function MenuDropdown() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  let navigate = useNavigate();
+
+
+  const logout = async (event) => {
+    event.preventDefault();
+
+    const response = await axios.get("/auth/logout");
+
+    navigate("/")
+  }
 
   return (
     <>
@@ -96,6 +108,7 @@ export default function MenuDropdown() {
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton
+                onClick={logout}
                 sx={{
                   alignItems: "center",
                   textAlign: "center",

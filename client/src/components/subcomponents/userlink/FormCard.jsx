@@ -13,7 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function RowAndColumnSpacing() {
+export default function RowAndColumnSpacing({updateField}) {
   return (
     <Box
       sx={{ width: "100%", "& .MuiTextField-root": { m: 1, width: "10" } }}
@@ -24,16 +24,16 @@ export default function RowAndColumnSpacing() {
       <Item>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={6}>
-            <TextField required id="outlined-required" label="First Name" />
+            <TextField required id="outlined-required" label="First Name" onChange= {updateField}/>
           </Grid>
           <Grid item xs={6}>
-            <TextField required id="outlined-required" label="Last Name" />
+            <TextField required id="outlined-required" label="Last Name" onChange= {updateField} />
           </Grid>
           <Grid item xs={6}>
-            <TextField required id="outlined-required" label="Email" />
+            <TextField required id="outlined-required" label="Email" onChange= {updateField} />
           </Grid>
           <Grid item xs={6}>
-            <TextField required id="outlined-required" label="Phone" />
+            <TextField required id="outlined-required" label="Phone" onChange= {updateField} />
           </Grid>
         </Grid>
       </Item>

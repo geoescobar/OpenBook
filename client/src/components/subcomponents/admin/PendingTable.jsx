@@ -7,9 +7,19 @@ import {
   TableCell,
   Paper,
 } from "@mui/material";
+import axios from "axios";
 import BasicSelect from "./Select";
 
 export const PendingTable = () => {
+
+  const fetchApi = async () => {
+
+    const response = await axios.get("/appointment");
+
+  };
+
+
+
   return (
     <TableContainer sx={{ maxHeight: "800px" }} component={Paper}>
       <Table stickyHeader aria-label="simple table">

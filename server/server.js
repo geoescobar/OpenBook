@@ -1,18 +1,22 @@
-const express = require("express");
+require('dotenv').config();
+const express = require('express');
+const db = require('./config/connection');
+const routes = require('./routes');
+
 const app = express();
-const path = require("path");
-const db = require("./config/connection");
-const routes = require("./routes");
+const PORT = 3001 || process.env.PORT;
 
-const PORT = process.env.PORT || 3001;
 
-app.use(express.json());
+// app.use(cookieParser);
+
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(routes);
 
-// creating port
-db.once("open", () => {
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}!!`);
-  });
+
+
+db.once('open', () => {
+    app.listen(PORT, () => {
+        console.log(`API server running on port ${PORT}!`);
+    });
 });

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start:dev": "concurrently \"cd client && npm run start\" \"cd server && npm run start\"",
     "start": "npm run build && cd server && node server.js"
@@ -20,5 +21,8 @@
   "homepage": "https://github.com/geoescobar/OpenBook#readme",
   "devDependencies": {
     "concurrently": "^7.3.0"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6"
   }
 }
