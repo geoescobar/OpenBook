@@ -1,3 +1,5 @@
+// DONT FORGET THAT timestamps GOT ADDED
+
 const { Schema, model } = require("mongoose");
 const dayjs = require("dayjs")
 const formatDate = (date) => {
@@ -46,7 +48,8 @@ const apptSchema = new Schema({
     status: {
         type: Boolean,
         required: true,
+        default: false,
     }
-});
+}, { timestamps: true });
 const Appt = model("Appt", apptSchema);
 module.exports = Appt;

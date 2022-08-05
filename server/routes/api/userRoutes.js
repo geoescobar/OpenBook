@@ -7,9 +7,10 @@ router.post("/", async (req, res) => {
         const userData = await createUser(req.body)
         res.status(200).json(userData)
     } catch (error) {
+        console.log(error)
         res.status(500).json(error);
     }
-})
+});
 // get all users
 router.get("/", async (req, res) => {
     try {
@@ -20,6 +21,5 @@ router.get("/", async (req, res) => {
         res.status(500).json(error)
 
     }
-})
-
+});
 module.exports = router;

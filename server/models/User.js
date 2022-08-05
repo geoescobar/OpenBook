@@ -1,4 +1,8 @@
+
+
 const { Schema, model } = require("mongoose");
+const bcrypt = require('bcrypt');
+
 const userSchema = new Schema({
     firstName: {
         type: String,
@@ -7,13 +11,12 @@ const userSchema = new Schema({
     },
     lastName: {
         type: String,
-        required: true,
+        required: false,
         trim: true,
     },
-    userName: {
+    businessName: {
         type: String,
-        required: true,
-        unique: true,
+        required: false,
         trim: true,
     },
     email: {
@@ -28,11 +31,31 @@ const userSchema = new Schema({
         required: true,
         trim: true,
     },
+    city: {
+        type: String,
+        required: false,
+        trim: true,
+    },
+    state: {
+        type: String,
+        required: false,
+        trim: true,
+    },
     phoneNumber: {
         type: Number,
-        required: true,
-        trim: true,
+        required: false,
+        match: /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/
     }
 });
+
+userSchema.pre('save', async function (next) {
+    if (this.isNew || this.isModified('password')) {
+        const saltRounds = 10;
+        this.password = await bcrypt.hash(this.password, saltRounds);
+    }
+
+    next();
+});
+
 const User = model("User", userSchema);
 module.exports = User;

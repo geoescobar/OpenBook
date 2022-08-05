@@ -1,19 +1,48 @@
 const { Appt } = require('../models');
 
-const createAppt = async (data) => {
-    const apptData = await Appt.create(data);
-    return apptData;
+const apptControllers = {
+    // MIGHT NEED TO CHANGE TO data then Appt.create(data)
+    async createAppt(req, res) {
+        console.log('CREATE APPT REQ PARAM', req)
+        const { firstName, lastName, email, dateSelected, timeSelected } = req;
+        if (!firstName || !lastName || !email || !dateSelected || !timeSelected) {
+            return res.status(412).json({
+                message: 'Something required is missing.'
+            });
+        }
+
+
+        const apptData = await Appt.create(req);
+        return apptData;
+    },
+
+    async getAllAppts(req, res) {
+
+        const apptData = await Appt.find({})
+        res.json(apptData);
+    },
+
+    async updateAppt(req, res) {
+        try {
+            const apptUpdate = Appt.findByIdAndUpdate(
+                req.params.id,
+                { $set: req.body },
+                { new: true }
+            );
+            res.status(200).json(apptUpdate);
+        } catch (error) {
+            res.status(403).json(error, { message: 'Could not update' })
+        }
+    }
+
 }
 
-// approve or deny
-const updateAppt = async (data) => {
-    const apptData = await Appt.findOneAndUpdate(data);
-    return apptData;
-}
 // would this be the appt denial??
-const deleteAppt = async (data) => {
-    const apptData = await Appt.findByIdAndDelete(data);
-    return apptData;
-}
+// const deleteAppt = async (data) => {
+//     const apptData = await Appt.findByIdAndDelete(data);
+//     return apptData;
+// }
 
-module.exports = { createAppt, updateAppt }
+
+
+module.exports = apptControllers;
