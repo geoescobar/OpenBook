@@ -1,13 +1,35 @@
-body {
+/* * {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  scroll-behavior: smooth;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap");
+
+body {
+  background-color: #e8f1f2 !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.date-picker-wrapper .MuiDialogActions-root {
+  display: none !important;
+}
+
+.date-picker-wrapper .MuiSvgIcon-root {
+  display: none;
+}
+
+.date-picker-wrapper .MuiTypography-overline {
+  display: none;
+}
+
+.logo {
+  margin-top: 25px;
+  height: 200px;
+  width: 200px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: black;
 }
