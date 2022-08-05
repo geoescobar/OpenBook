@@ -7,6 +7,7 @@ import Avatar from "@mui/material/Avatar";
 import WorkIcon from "@mui/icons-material/Work";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
+import { Link } from "react-router-dom";
 
 export default function AptManager() {
   return (
@@ -15,40 +16,62 @@ export default function AptManager() {
         width: "100%",
         maxWidth: 360,
         bgcolor: "background.paper",
-      
+
         color: "black",
       }}
     >
-      <ListItem sx={{ marginTop: "60px" }}>
-        <ListItemAvatar>
-          <Avatar sx={{ color: "white", bgcolor: "#232528" }}>
-            <WorkIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText
-          primary="Pending"
-          secondary="Manage Pending Appointments"
-        />
-      </ListItem>
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar sx={{ color: "white", bgcolor: "green" }}>
-            <CheckCircleIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText
-          primary="Approved"
-          secondary="View Approved Appointments"
-        />
-      </ListItem>
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar sx={{ color: "white", bgcolor: "red" }}>
-            <CancelIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Denied" secondary="View Denied Appointments" />
-      </ListItem>
+      <Link to={"/data-tables?status=pending"}>
+        <ListItem sx={{ marginTop: "60px" }}>
+          <ListItemAvatar>
+            <Avatar sx={{ color: "white", bgcolor: "#232528" }}>
+              <WorkIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText
+            primary="Pending"
+            secondary="Manage Pending Appointments"
+            sx={{
+              color: "black",
+              textDecoration: "none",
+            }}
+          />
+        </ListItem>
+      </Link>
+      <Link to={"/data-tables?status=approved"}>
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar sx={{ color: "white", bgcolor: "green" }}>
+              <CheckCircleIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText
+            primary="Approved"
+            secondary="View Approved Appointments"
+            sx={{
+              color: "black",
+              textDecoration: "none",
+            }}
+          />
+        </ListItem>
+      </Link>
+
+      <Link to={"/data-tables?status=denied"}>
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar sx={{ color: "white", bgcolor: "red" }}>
+              <CancelIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText
+            primary="Denied"
+            sx={{
+              color: "black",
+              textDecoration: "none",
+            }}
+            secondary="View Denied Appointments"
+          />
+        </ListItem>
+      </Link>
     </List>
   );
 }

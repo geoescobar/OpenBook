@@ -75,7 +75,7 @@ export default function MenuDropdown() {
                 }}
               >
                 <Link to={"/data-tables"} className="menu-link">
-                  Manage Appoinments
+                  Manage Appointments
                 </Link>
               </ListItemButton>
             </ListItem>

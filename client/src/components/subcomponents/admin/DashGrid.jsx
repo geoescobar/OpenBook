@@ -9,6 +9,8 @@ import Typography from "@mui/material/Typography";
 import AptManager from "./AptManager";
 import DashCal from "./DashCal";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -116,7 +118,7 @@ export default function BasicGrid() {
               href="/"
               sx={{ color: "black", textDecoration: "underline" }}
             >
-              OpenBook.com/book-appointment
+             <Link to={'/date-picker'}>OpenBook.com/book-appointment</Link> 
             </Typography>
           </Item>
         </Grid>
