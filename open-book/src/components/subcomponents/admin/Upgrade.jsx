@@ -34,7 +34,8 @@ function Copyright(props) {
 
 const tiers = [
   {
-    title: "Silver",
+    title: "Bronze",
+    backgroundColor: "#BE7023",
     price: "0",
     description: [
       "Approve & Deny Appointments",
@@ -47,6 +48,7 @@ const tiers = [
   },
   {
     title: "Gold",
+    backgroundColor: "#FFD700",
     subheader: "Most Popular",
     price: "96.00",
     description: [
@@ -61,6 +63,7 @@ const tiers = [
   },
   {
     title: "Platinum",
+    backgroundColor: "#E5E4E2",
     price: "144.00",
     description: [
       "Assign Administrative Roles",
@@ -130,10 +133,7 @@ function PricingContent() {
                     align: "center",
                   }}
                   sx={{
-                    backgroundColor: (theme) =>
-                      theme.palette.mode === "light"
-                        ? theme.palette.grey[200]
-                        : theme.palette.grey[700],
+                    backgroundColor: tier.backgroundColor,
                   }}
                 />
                 <CardContent>
