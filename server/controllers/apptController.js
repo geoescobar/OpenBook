@@ -1,7 +1,6 @@
 const { Appt } = require('../models');
 
 const apptControllers = {
-    // MIGHT NEED TO CHANGE TO data then Appt.create(data)
     async createAppt(req, res) {
         console.log('CREATE APPT REQ PARAM', req)
         const { firstName, lastName, email, dateSelected, timeSelected } = req;
@@ -36,13 +35,5 @@ const apptControllers = {
     }
 
 }
-
-// would this be the appt denial??
-// const deleteAppt = async (data) => {
-//     const apptData = await Appt.findByIdAndDelete(data);
-//     return apptData;
-// }
-
-
 
 module.exports = apptControllers;

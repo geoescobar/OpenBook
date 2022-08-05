@@ -1,5 +1,4 @@
-// DONT FORGET THAT timestamps GOT ADDED
-
+// TIMESTAMPS GOT ADDED
 const { Schema, model } = require("mongoose");
 const dayjs = require("dayjs")
 const formatDate = (date) => {
