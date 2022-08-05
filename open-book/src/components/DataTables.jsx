@@ -9,6 +9,7 @@ import { PendingTable } from "./subcomponents/admin/PendingTable";
 import { DeniedTable } from "./subcomponents/admin/DeniedTable";
 import Navbar from "./subcomponents/admin/Navbar";
 import Container from "@mui/material/Container";
+import { useEffect } from "react";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,6 +46,20 @@ function a11yProps(index) {
 
 export default function DataTables() {
   const [value, setValue] = React.useState(0);
+
+  const url = new URL(window.location.href);
+  const params = new URLSearchParams(url.search);
+  const currentTab = params.get("status");
+
+  useEffect(() => {
+    if (currentTab === "pending") {
+      setValue(0);
+    } else if (currentTab === "approved") {
+      setValue(1);
+    } else if (currentTab === "denied") {
+      setValue(2);
+    }
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
