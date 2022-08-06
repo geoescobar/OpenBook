@@ -11,6 +11,7 @@ const login = async (req, res) => {
         if (!admin) return res.send('User not found')
 
         const isPassword = await bcrypt.compare(req.body.password, admin.password)
+        console.log(admin.password)
         if (!isPassword) return res.send('Wrong email or password')
         console.log(process.env.JWT)
         const token = jwt.sign({ id: admin._id, password: admin.password }, process.env.JWT)

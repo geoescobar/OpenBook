@@ -14,11 +14,6 @@ const userSchema = new Schema({
         required: false,
         trim: true,
     },
-    businessName: {
-        type: String,
-        required: false,
-        trim: true,
-    },
     email: {
         type: String,
         required: true,
@@ -28,16 +23,6 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true,
-        trim: true,
-    },
-    city: {
-        type: String,
-        required: false,
-        trim: true,
-    },
-    state: {
-        type: String,
-        required: false,
         trim: true,
     },
     phoneNumber: {

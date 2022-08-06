@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap");
+
+body {
+  background-color: #e8f1f2 !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.date-picker-wrapper .MuiDialogActions-root {
+  display: none !important;
+}
+
+.date-picker-wrapper .MuiSvgIcon-root {
+  display: none;
+}
+
+.date-picker-wrapper .MuiTypography-overline {
+  display: none;
+}
+
+.logo {
+  margin-top: 25px;
+  height: 200px;
+  width: 200px;
+}
+
+.logo-title {
+  margin-top: 2px;
+  height: 500px;
+  width: 500px;
+  z-index: 100;
+}
+
+.logo-two {
+  margin-top: 25px;
+  height: 150px;
+  width: 150px;
+  z-index: 100;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: black;
+}
+
+.title-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  color: #e8f1f2;
+}
+
+.button-title {
+  color: #e8f1f2;
+  text-decoration: none;
+}
