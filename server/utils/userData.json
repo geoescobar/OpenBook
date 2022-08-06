@@ -1,0 +1,34 @@
+[
+    {
+        "firstName": "Paul",
+        "lastName": "Won",
+        "userName": "baller2022",
+        "email": "baller@hoop.com",
+        "password": "password123",
+        "phoneNumber": 2147840150
+    },
+    {
+        "firstName": "Larry",
+        "lastName": "Bird",
+        "userName": "theBird",
+        "email": "birdy@gmail.com",
+        "password": "password456",
+        "phoneNumber": 2147840150
+    },
+    {
+        "firstName": "Lebron",
+        "lastName": "James",
+        "userName": "leTrash08",
+        "email": "leEmail@yahoo.com",
+        "password": "password789",
+        "phoneNumber": 2147840150
+    },
+    {
+        "firstName": "Kendrick",
+        "lastName": "Lamar",
+        "userName": "kcompton",
+        "email": "kenLamar@aim.com",
+        "password": "password012",
+        "phoneNumber": 2147840150
+    }
+]

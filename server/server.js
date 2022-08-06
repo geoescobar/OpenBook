@@ -1,10 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const jwt = require('jsonwebtoken');
-const mongoose = require('mongoose');
-const cookieParser = require('cookie-parser');
-const authRoutes = require('./routes/api/authRoutes');
-const userRoutes = require('./routes/api/userRoutes');
 const db = require('./config/connection');
 const routes = require('./routes');
 
